@@ -17,7 +17,7 @@ Be aware that by default, the application will open in console mode (that is, "t
 
 ### But how do I run it stealthily?
 
-It depends on the OS you want to execute it. In `Windows`, for example, make sure to first create the `.bat` file (as described above), then you can create a file called `run.vbs` with the following contents:
+It depends on the OS you want to execute it. In `Windows`, for example, create a file called `run.vbs` with the following contents:
 
 ```shell
 Set WshShell = CreateObject("WScript.Shell") 
@@ -25,7 +25,7 @@ WshShell.Run chr(34) & "rust-keylogger.exe" & Chr(34), 0
 Set WshShell = Nothing
 ```
 
-If you execute this `.vbs` file, no console window ("the black window") will appear at all, and the software will be executed fully stealthily. This means that you'll have to kill the Java process when you want to stop the keylogger.
+If you execute this `.vbs` file, no console window ("the black window") will appear at all, and the software will be executed fully stealthily. This means that you'll have to kill the process when you want to stop the keylogger.
 
 ## FAQ
 ### How do I stop the program?
@@ -34,11 +34,11 @@ You can stop it in many ways, for example, you can close its window, kill its pr
 
 ### Where do I find the logged keys?
 
-When you run the program, a file named `keys-{current_date_time}.txt` will be created in the same directory that the jar file is in, this is where the program will record all pressed keys.
+When you run the program, a file named `keys-{current_date_time}.txt` will be created in the same directory that the binary is in, this is where the program will record all pressed keys.
 
 ## Registered keys format rules
 
-This software follow some simple rules regarding the format of the registered keys:
+This software follows some simple rules regarding the format of the registered keys:
 
 - Provide the actual representation of the character whenever possible (e.g.: `!` instead of `[Shift]1`).
 - Pressing `Enter` will also jump a line in the log file (to improve readability).
