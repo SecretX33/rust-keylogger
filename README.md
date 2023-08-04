@@ -1,4 +1,4 @@
-# kotlin-keylogger
+# rust-keylogger
 A simple keylogger application implemented in Rust. It was heavily inspired by [kotlin-keylogger](https://github.com/SecretX33/kotlin-keylogger), and its main advantage over it is the resource consumption and the fact that it doesn't mess up with international keywords on Windows while it's running. 
 
 This project was optimized for capturing information entered using the keyboard (like forms and stuff), so in the log file you'll see the actual keys pressed (ex.: `!` instead of `[Shift]1`).
